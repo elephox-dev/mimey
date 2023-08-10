@@ -29,7 +29,7 @@ jobs:
       - image: cimg/php:8.1.22-browsers
     working_directory: ~/mimey
     steps:
-      - run: sudo -E apt-get install -y php8.1-phpdbg php8.1-xdebug
+      - run: sudo -E docker-php-ext-install xdebug
       - checkout
       - run: php --version
       - attach_workspace:
@@ -47,7 +47,7 @@ jobs:
       - image: cimg/php:8.2.8-browsers
     working_directory: ~/mimey
     steps:
-      - run: sudo -E apt-get install -y php8.2-phpdbg php8.2-xdebug
+      - run: sudo -E docker-php-ext-install xdebug
       - checkout
       - run: php --version
       - attach_workspace:
