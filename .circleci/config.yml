@@ -29,16 +29,15 @@ jobs:
       - image: cimg/php:8.1.22-browsers
     working_directory: ~/mimey
     steps:
-      - run: sudo pecl install xdebug && docker-php-ext-enable xdebug
+      - run: sudo pecl install xdebug
       - checkout
       - run: php --version
       - attach_workspace:
           at: .
       - run:
-          name: "Run tests"
-          command: phpdbg -qrr vendor/bin/phpunit --colors=never --log-junit build/phpunit/results81.xml --coverage-html build/coverage --coverage-clover build/clover.xml
-          environment:
-            XDEBUG_MODE: coverage
+          name: "Setup custom environment variables"
+          command: echo 'export XDEBUG_MODE="coverage"' >> "$BASH_ENV"
+      - run: phpdbg -qrr vendor/bin/phpunit --colors=never --log-junit build/phpunit/results81.xml --coverage-html build/coverage --coverage-clover build/clover.xml
       - run: vendor/bin/php-coveralls -x build/clover.xml -o build/coveralls.json || true
       - store_test_results:
           path: build
@@ -53,10 +52,9 @@ jobs:
       - attach_workspace:
           at: .
       - run:
-          name: "Run tests"
-          command: phpdbg -qrr vendor/bin/phpunit --colors=never --log-junit build/phpunit/results82.xml --coverage-html build/coverage --coverage-clover build/clover.xml
-          environment:
-            XDEBUG_MODE: coverage
+          name: "Setup custom environment variables"
+          command: echo 'export XDEBUG_MODE="coverage"' >> "$BASH_ENV"
+      - run: phpdbg -qrr vendor/bin/phpunit --colors=never --log-junit build/phpunit/results82.xml --coverage-html build/coverage --coverage-clover build/clover.xml
       - run: vendor/bin/php-coveralls -x build/clover.xml -o build/coveralls.json || true
       - run:
           name: Creating Dummy Artifacts
@@ -73,6 +71,9 @@ workflows:
   test:
     jobs:
       - install
+      - test-php81:
+          requires:
+            - install
       - test-php82:
           requires:
             - install
