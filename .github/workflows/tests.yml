@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    name: Run Unit Tests PHP ${{ matrix.php }}
+    name: Run Unit Tests ${{ matrix.php }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    -  name: Installing PHP
+    -  name: Install PHP ${{ matrix.php }}
        uses: shivammathur/setup-php@master
        with:
          php-version: ${{ matrix.php }}
