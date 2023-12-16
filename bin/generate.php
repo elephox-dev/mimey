@@ -22,7 +22,7 @@ $mapping = $generator->generateMapping();
 
 file_put_contents($jsonDestination, $generator->generateJson(false));
 file_put_contents($minJsonDestination, $generator->generateJson());
-file_put_contents($enumDestination, $generator->generatePhpEnum());
+file_put_contents($enumDestination, $generator->generatePhpEnum(withOverrideAttribute: false));
 
 echo "Generated MIME types mapping to:" . PHP_EOL;
 echo " - " . $jsonDestination . PHP_EOL;

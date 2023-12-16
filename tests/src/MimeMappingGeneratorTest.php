@@ -3,8 +3,10 @@
 namespace Elephox\Mimey\Tests;
 
 use Elephox\Mimey\MimeMappingGenerator;
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 
+#[CoversClass(MimeMappingGenerator::class)]
 class MimeMappingGeneratorTest extends TestCase
 {
 	public function testGenerateMapping(): void

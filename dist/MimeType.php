@@ -13,6 +13,7 @@ namespace Elephox\Mimey;
 use RuntimeException;
 use InvalidArgumentException;
 
+
 enum MimeType: string implements MimeTypeInterface
 {
 	case ApplicationFontWoff = 'application/font-woff';

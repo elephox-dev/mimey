@@ -8,9 +8,10 @@
 		<directory>tests/src</directory>
 	</testsuite>
 
-	<coverage>
+	<source>
 		<include>
 			<directory>src</directory>
+			<directory>dist</directory>
 		</include>
-	</coverage>
+	</source>
 </phpunit>

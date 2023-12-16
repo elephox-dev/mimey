@@ -4,9 +4,11 @@ namespace Elephox\Mimey\Tests;
 
 use Elephox\Mimey\MimeTypes;
 use Elephox\Mimey\MimeMappingBuilder;
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
 
+#[CoversClass(MimeMappingBuilder::class)]
 class MimeMappingBuilderTest extends TestCase
 {
 	public function testFromEmpty(): void

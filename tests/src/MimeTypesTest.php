@@ -3,10 +3,13 @@
 namespace Elephox\Mimey\Tests;
 
 use Elephox\Mimey\MimeTypes;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use ReflectionClass;
 use RuntimeException;
 
+#[CoversClass(MimeTypes::class)]
 class MimeTypesTest extends TestCase
 {
 	protected ?MimeTypes $mime = null;
@@ -30,7 +33,7 @@ class MimeTypesTest extends TestCase
 		]);
 	}
 
-	public function getMimeTypeProvider(): array
+	public static function getMimeTypeProvider(): array
 	{
 		return [
 			['application/json', 'json'],
@@ -41,15 +44,13 @@ class MimeTypesTest extends TestCase
 		];
 	}
 
-	/**
-	 * @dataProvider getMimeTypeProvider
-	 */
+	#[DataProvider('getMimeTypeProvider')]
 	public function testGetMimeType($expectedMimeType, $extension): void
 	{
 		$this->assertEquals($expectedMimeType, $this->mime->getMimeType($extension));
 	}
 
-	public function getExtensionProvider(): array
+	public static function getExtensionProvider(): array
 	{
 		return [
 			['json', 'application/json'],
@@ -59,15 +60,13 @@ class MimeTypesTest extends TestCase
 		];
 	}
 
-	/**
-	 * @dataProvider getExtensionProvider
-	 */
+	#[DataProvider('getExtensionProvider')]
 	public function testGetExtension($expectedExtension, $mimeType): void
 	{
 		$this->assertEquals($expectedExtension, $this->mime->getExtension($mimeType));
 	}
 
-	public function getAllMimeTypesProvider(): array
+	public static function getAllMimeTypesProvider(): array
 	{
 		return [
 			[
@@ -88,15 +87,13 @@ class MimeTypesTest extends TestCase
 		];
 	}
 
-	/**
-	 * @dataProvider getAllMimeTypesProvider
-	 */
+	#[DataProvider('getAllMimeTypesProvider')]
 	public function testGetAllMimeTypes($expectedMimeTypes, $extension): void
 	{
 		$this->assertEquals($expectedMimeTypes, $this->mime->getAllMimeTypes($extension));
 	}
 
-	public function getAllExtensionsProvider(): array
+	public static function getAllExtensionsProvider(): array
 	{
 		return [
 			[
@@ -114,9 +111,7 @@ class MimeTypesTest extends TestCase
 		];
 	}
 
-	/**
-	 * @dataProvider getAllExtensionsProvider
-	 */
+	#[DataProvider('getAllExtensionsProvider')]
 	public function testGetAllExtensions($expectedExtensions, $mimeType): void
 	{
 		$this->assertEquals($expectedExtensions, $this->mime->getAllExtensions($mimeType));
