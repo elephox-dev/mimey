@@ -814,6 +814,9 @@
         "ggb": [
             "application\/vnd.geogebra.file"
         ],
+        "ggs": [
+            "application\/vnd.geogebra.slides"
+        ],
         "ggt": [
             "application\/vnd.geogebra.tool"
         ],
@@ -1725,6 +1728,9 @@
         ],
         "vxml": [
             "application\/voicexml+xml"
+        ],
+        "wasm": [
+            "application\/wasm"
         ],
         "wgt": [
             "application\/widget"
@@ -3714,6 +3720,9 @@
         "application\/vnd.geogebra.file": [
             "ggb"
         ],
+        "application\/vnd.geogebra.slides": [
+            "ggs"
+        ],
         "application\/vnd.geogebra.tool": [
             "ggt"
         ],
@@ -4537,6 +4546,9 @@
         ],
         "application\/voicexml+xml": [
             "vxml"
+        ],
+        "application\/wasm": [
+            "wasm"
         ],
         "application\/widget": [
             "wgt"
