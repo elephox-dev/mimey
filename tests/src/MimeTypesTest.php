@@ -4,7 +4,7 @@ namespace Elephox\Mimey\Tests;
 
 use Elephox\Mimey\MimeTypes;
 use PHPUnit\Framework\TestCase;
-use ReflectionProperty;
+use ReflectionClass;
 use RuntimeException;
 
 class MimeTypesTest extends TestCase
@@ -156,8 +156,8 @@ class MimeTypesTest extends TestCase
 		rename($original, $backup);
 		file_put_contents($original, 'invalid json');
 
-		$property = new ReflectionProperty(MimeTypes::class, 'built_in');
-		$property->setValue(null);
+		$class = new ReflectionClass(MimeTypes::class);
+		$class->setStaticPropertyValue('built_in', null);
 
 		try {
 			$this->expectException(RuntimeException::class);
