@@ -3,6 +3,7 @@ name: Generate Mime Types
 on:
   push:
     paths:
+      - ".github/workflows/generate.yml"
       - "data/mime.types"
       - "data/mime.types.custom"
       - "stubs/mimeType.php.stub"

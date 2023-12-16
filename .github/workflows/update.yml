@@ -2,6 +2,9 @@ name: Update Mime Types
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/update.yml"
   schedule:
     - cron: "0 10 1 */3 *"
 
