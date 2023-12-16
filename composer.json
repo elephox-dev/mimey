@@ -34,7 +34,7 @@
     }
   },
   "scripts": {
-    "test": "phpunit --display-deprecations",
+    "test": "phpunit",
     "generate-types": "@php bin/generate.php",
     "update-types": "@php bin/update.php"
   }
