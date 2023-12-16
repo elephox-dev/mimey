@@ -88,6 +88,13 @@ EOF
 
 		self::assertEquals(<<<EOF
 <?php
+/**
+ * @generated This file was generated using Mimey. DO NOT EDIT manually!
+ *
+ * @noinspection ALL
+ * @codeCoverageIgnore
+ */
+
 declare(strict_types=1);
 
 namespace TestMimeNamespace;
