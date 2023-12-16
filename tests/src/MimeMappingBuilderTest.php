@@ -92,4 +92,12 @@ class MimeMappingBuilderTest extends TestCase
 
 		MimeMappingBuilder::load($file);
 	}
+
+	public function testMultibyteExtension(): void
+	{
+		$builder = MimeMappingBuilder::blank();
+		$builder->add('foo/bar', 'fôõbår');
+		$mime = new MimeTypes($builder->getMapping());
+		$this->assertEquals('fôõbår', $mime->getExtension('foo/bar'));
+	}
 }
