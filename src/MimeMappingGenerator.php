@@ -70,16 +70,29 @@ class MimeMappingGenerator
 	}
 
 	/**
-	 * @param non-empty-string $classname
-	 * @param non-empty-string $namespace
+	 * @param non-empty-string $classname The name of the generated enum (defaults to: "MimeType")
+	 * @param non-empty-string $namespace The namespace to put the enum into (defaults to this namespace)
+	 * @param bool|null $withOverrideAttribute Whether to add the #[Override] attribute to the generated enum (requires PHP 8.3, defaults to true if PHP >= 8.3, false otherwise)
 	 * @return non-empty-string
 	 */
-	public function generatePhpEnum(string $classname = "MimeType", string $namespace = __NAMESPACE__): string
+	public function generatePhpEnum(string $classname = "MimeType", string $namespace = __NAMESPACE__, ?bool $withOverrideAttribute = null): string
 	{
+		$usages = [];
+		if ($namespace !== __NAMESPACE__) {
+			$usages[] = "use " . MimeTypeInterface::class . ";";
+		}
+
+		$overrideAttribute = '';
+		if (($withOverrideAttribute === null && PHP_VERSION_ID >= 80300) || $withOverrideAttribute) {
+			$usages[] = "use Override;";
+			$overrideAttribute = "\n\t#[Override]";
+		}
+
 		$values = [
 			'namespace' => $namespace,
 			'classname' => $classname,
-			'interface_usage' => $namespace !== __NAMESPACE__ ? ("use " . MimeTypeInterface::class . ";\n") : '',
+			'usages' => implode("\n", $usages),
+			'overrideAttribute' => $overrideAttribute,
 			'cases' => "",
 			'type2ext' => "",
 			'ext2type' => "",

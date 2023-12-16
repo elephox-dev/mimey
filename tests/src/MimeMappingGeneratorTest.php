@@ -84,7 +84,7 @@ image/jpeg\tjpeg jpg
 EOF
 		);
 
-		$phpEnum = $generator->generatePhpEnum("TestMimeClass", "TestMimeNamespace");
+		$phpEnum = $generator->generatePhpEnum("TestMimeClass", "TestMimeNamespace", withOverrideAttribute: false);
 
 		self::assertEquals(<<<EOF
 <?php

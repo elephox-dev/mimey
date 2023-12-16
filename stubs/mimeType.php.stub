@@ -12,10 +12,11 @@ namespace %namespace%;
 
 use RuntimeException;
 use InvalidArgumentException;
-%interface_usage%
+%usages%
+
 enum %classname%: string implements MimeTypeInterface
 {
-%cases%
+%cases%%overrideAttribute%
 	public function getExtension(): string
 	{
 		return match($this) {
@@ -23,7 +24,7 @@ enum %classname%: string implements MimeTypeInterface
 			default => throw new RuntimeException("Unknown extension for type: " . $this->value),
 		};
 	}
-
+%overrideAttribute%
 	public function getValue(): string
 	{
 		return $this->value;
