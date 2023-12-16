@@ -1,6 +1,7 @@
 name: Generate Mime Types
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - ".github/workflows/generate.yml"
