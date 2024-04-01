@@ -2583,9 +2583,6 @@
         "gtw": [
             "model\/vnd.gtw"
         ],
-        "mts": [
-            "model\/vnd.mts"
-        ],
         "vtu": [
             "model\/vnd.vtu"
         ],
@@ -2846,6 +2843,18 @@
         ],
         "mjp2": [
             "video\/mj2"
+        ],
+        "ts": [
+            "video\/mp2t"
+        ],
+        "m2t": [
+            "video\/mp2t"
+        ],
+        "m2ts": [
+            "video\/mp2t"
+        ],
+        "mts": [
+            "video\/mp2t"
         ],
         "mp4": [
             "video\/mp4"
@@ -5265,9 +5274,6 @@
         "model\/vnd.gtw": [
             "gtw"
         ],
-        "model\/vnd.mts": [
-            "mts"
-        ],
         "model\/vnd.vtu": [
             "vtu"
         ],
@@ -5454,6 +5460,12 @@
         "video\/mj2": [
             "mj2",
             "mjp2"
+        ],
+        "video\/mp2t": [
+            "ts",
+            "m2t",
+            "m2ts",
+            "mts"
         ],
         "video\/mp4": [
             "mp4",

@@ -713,7 +713,6 @@ enum MimeType: string implements MimeTypeInterface
 	case ModelVndDwf = 'model/vnd.dwf';
 	case ModelVndGdl = 'model/vnd.gdl';
 	case ModelVndGtw = 'model/vnd.gtw';
-	case ModelVndMts = 'model/vnd.mts';
 	case ModelVndVtu = 'model/vnd.vtu';
 	case ModelVrml = 'model/vrml';
 	case ModelX3dBinary = 'model/x3d+binary';
@@ -767,6 +766,7 @@ enum MimeType: string implements MimeTypeInterface
 	case VideoJpeg = 'video/jpeg';
 	case VideoJpm = 'video/jpm';
 	case VideoMj2 = 'video/mj2';
+	case VideoMp2t = 'video/mp2t';
 	case VideoMp4 = 'video/mp4';
 	case VideoMpeg = 'video/mpeg';
 	case VideoOgg = 'video/ogg';
@@ -1500,7 +1500,6 @@ enum MimeType: string implements MimeTypeInterface
 			self::ModelVndDwf => 'dwf',
 			self::ModelVndGdl => 'gdl',
 			self::ModelVndGtw => 'gtw',
-			self::ModelVndMts => 'mts',
 			self::ModelVndVtu => 'vtu',
 			self::ModelVrml => 'wrl',
 			self::ModelX3dBinary => 'x3db',
@@ -1554,6 +1553,7 @@ enum MimeType: string implements MimeTypeInterface
 			self::VideoJpeg => 'jpgv',
 			self::VideoJpm => 'jpm',
 			self::VideoMj2 => 'mj2',
+			self::VideoMp2t => 'ts',
 			self::VideoMp4 => 'mp4',
 			self::VideoMpeg => 'mpeg',
 			self::VideoOgg => 'ogv',
@@ -2466,7 +2466,6 @@ enum MimeType: string implements MimeTypeInterface
 			'dwf' => self::ModelVndDwf,
 			'gdl' => self::ModelVndGdl,
 			'gtw' => self::ModelVndGtw,
-			'mts' => self::ModelVndMts,
 			'vtu' => self::ModelVndVtu,
 			'wrl' => self::ModelVrml,
 			'vrml' => self::ModelVrml,
@@ -2554,6 +2553,10 @@ enum MimeType: string implements MimeTypeInterface
 			'jpgm' => self::VideoJpm,
 			'mj2' => self::VideoMj2,
 			'mjp2' => self::VideoMj2,
+			'ts' => self::VideoMp2t,
+			'm2t' => self::VideoMp2t,
+			'm2ts' => self::VideoMp2t,
+			'mts' => self::VideoMp2t,
 			'mp4' => self::VideoMp4,
 			'mp4v' => self::VideoMp4,
 			'mpg4' => self::VideoMp4,
