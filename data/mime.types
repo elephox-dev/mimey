@@ -1538,6 +1538,7 @@ font/otf					otf
 font/ttf					ttf
 font/woff					woff
 font/woff2					woff2
+image/avif					avif
 image/bmp					bmp
 image/cgm					cgm
 # image/dicom-rle
@@ -1552,6 +1553,7 @@ image/ief					ief
 image/jpeg					jpeg jpg jpe
 # image/jpm
 # image/jpx
+image/jxl					jxl
 image/ktx					ktx
 # image/naplps
 image/png					png

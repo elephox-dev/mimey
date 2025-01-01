@@ -2396,6 +2396,9 @@
         "ief": [
             "image\/ief"
         ],
+        "jxl": [
+            "image\/jxl"
+        ],
         "ktx": [
             "image\/ktx"
         ],
@@ -5117,6 +5120,9 @@
         ],
         "image\/ief": [
             "ief"
+        ],
+        "image\/jxl": [
+            "jxl"
         ],
         "image\/ktx": [
             "ktx"
