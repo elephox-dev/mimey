@@ -1,5 +1,5 @@
 {
-  "name": "elephox/mimey",
+  "name": "preprio/mimey",
   "description": "PHP package for converting file extensions to MIME types and vice versa.",
   "license": "MIT",
   "type": "library",

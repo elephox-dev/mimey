@@ -31,3 +31,4 @@ text/x-php					php
 image/heif					heif heic
 image/avif					avif
 text/plain					env
+image/heic					heic
