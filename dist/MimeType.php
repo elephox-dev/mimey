@@ -31,6 +31,7 @@ enum MimeType: string implements MimeTypeInterface
 	case TextPhp = 'text/php';
 	case TextXPhp = 'text/x-php';
 	case ImageHeif = 'image/heif';
+	case ImageHeic = 'image/heic';
 	case ImageAvif = 'image/avif';
 	case TextPlain = 'text/plain';
 	case ApplicationAndrewInset = 'application/andrew-inset';
@@ -819,6 +820,7 @@ enum MimeType: string implements MimeTypeInterface
 			self::TextPhp => 'php',
 			self::TextXPhp => 'php',
 			self::ImageHeif => 'heif',
+			self::ImageHeic => 'heic',
 			self::ImageAvif => 'avif',
 			self::TextPlain => 'env',
 			self::ApplicationAndrewInset => 'ez',
@@ -1629,7 +1631,7 @@ enum MimeType: string implements MimeTypeInterface
 			'jpe' => self::ImageJpeg,
 			'bmp' => self::ImageXMsBmp,
 			'heif' => self::ImageHeif,
-			'heic' => self::ImageHeif,
+			'heic' => self::ImageHeic,
 			'avif' => self::ImageAvif,
 			'env' => self::TextPlain,
 			'ez' => self::ApplicationAndrewInset,

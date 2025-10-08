@@ -65,7 +65,7 @@
             "image\/heif"
         ],
         "heic": [
-            "image\/heif"
+            "image\/heic"
         ],
         "avif": [
             "image\/avif"
@@ -3059,7 +3059,9 @@
             "php"
         ],
         "image\/heif": [
-            "heif",
+            "heif"
+        ],
+        "image\/heic": [
             "heic"
         ],
         "image\/avif": [
