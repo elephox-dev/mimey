@@ -1519,6 +1519,12 @@
         "sfs": [
             "application\/vnd.spotfire.sfs"
         ],
+        "sqlite": [
+            "application\/vnd.sqlite3"
+        ],
+        "sqlite3": [
+            "application\/vnd.sqlite3"
+        ],
         "sdc": [
             "application\/vnd.stardivision.calc"
         ],
@@ -2392,6 +2398,12 @@
         ],
         "gif": [
             "image\/gif"
+        ],
+        "heics": [
+            "image\/heic-sequence"
+        ],
+        "heifs": [
+            "image\/heif-sequence"
         ],
         "ief": [
             "image\/ief"
@@ -4371,6 +4383,10 @@
         "application\/vnd.spotfire.sfs": [
             "sfs"
         ],
+        "application\/vnd.sqlite3": [
+            "sqlite",
+            "sqlite3"
+        ],
         "application\/vnd.stardivision.calc": [
             "sdc"
         ],
@@ -5119,6 +5135,12 @@
         ],
         "image\/gif": [
             "gif"
+        ],
+        "image\/heic-sequence": [
+            "heics"
+        ],
+        "image\/heif-sequence": [
+            "heifs"
         ],
         "image\/ief": [
             "ief"

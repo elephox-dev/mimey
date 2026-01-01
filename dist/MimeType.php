@@ -440,6 +440,7 @@ enum MimeType: string implements MimeTypeInterface
 	case ApplicationVndSolentSdkmXml = 'application/vnd.solent.sdkm+xml';
 	case ApplicationVndSpotfireDxp = 'application/vnd.spotfire.dxp';
 	case ApplicationVndSpotfireSfs = 'application/vnd.spotfire.sfs';
+	case ApplicationVndSqlite3 = 'application/vnd.sqlite3';
 	case ApplicationVndStardivisionCalc = 'application/vnd.stardivision.calc';
 	case ApplicationVndStardivisionDraw = 'application/vnd.stardivision.draw';
 	case ApplicationVndStardivisionImpress = 'application/vnd.stardivision.impress';
@@ -666,6 +667,8 @@ enum MimeType: string implements MimeTypeInterface
 	case ImageCgm = 'image/cgm';
 	case ImageG3fax = 'image/g3fax';
 	case ImageGif = 'image/gif';
+	case ImageHeicSequence = 'image/heic-sequence';
+	case ImageHeifSequence = 'image/heif-sequence';
 	case ImageIef = 'image/ief';
 	case ImageJxl = 'image/jxl';
 	case ImageKtx = 'image/ktx';
@@ -1229,6 +1232,7 @@ enum MimeType: string implements MimeTypeInterface
 			self::ApplicationVndSolentSdkmXml => 'sdkm',
 			self::ApplicationVndSpotfireDxp => 'dxp',
 			self::ApplicationVndSpotfireSfs => 'sfs',
+			self::ApplicationVndSqlite3 => 'sqlite',
 			self::ApplicationVndStardivisionCalc => 'sdc',
 			self::ApplicationVndStardivisionDraw => 'sda',
 			self::ApplicationVndStardivisionImpress => 'sdd',
@@ -1455,6 +1459,8 @@ enum MimeType: string implements MimeTypeInterface
 			self::ImageCgm => 'cgm',
 			self::ImageG3fax => 'g3',
 			self::ImageGif => 'gif',
+			self::ImageHeicSequence => 'heics',
+			self::ImageHeifSequence => 'heifs',
 			self::ImageIef => 'ief',
 			self::ImageJxl => 'jxl',
 			self::ImageKtx => 'ktx',
@@ -2116,6 +2122,8 @@ enum MimeType: string implements MimeTypeInterface
 			'sdkd' => self::ApplicationVndSolentSdkmXml,
 			'dxp' => self::ApplicationVndSpotfireDxp,
 			'sfs' => self::ApplicationVndSpotfireSfs,
+			'sqlite' => self::ApplicationVndSqlite3,
+			'sqlite3' => self::ApplicationVndSqlite3,
 			'sdc' => self::ApplicationVndStardivisionCalc,
 			'sda' => self::ApplicationVndStardivisionDraw,
 			'sdd' => self::ApplicationVndStardivisionImpress,
@@ -2407,6 +2415,8 @@ enum MimeType: string implements MimeTypeInterface
 			'cgm' => self::ImageCgm,
 			'g3' => self::ImageG3fax,
 			'gif' => self::ImageGif,
+			'heics' => self::ImageHeicSequence,
+			'heifs' => self::ImageHeifSequence,
 			'ief' => self::ImageIef,
 			'jxl' => self::ImageJxl,
 			'ktx' => self::ImageKtx,
