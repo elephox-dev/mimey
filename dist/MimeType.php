@@ -30,8 +30,6 @@ enum MimeType: string implements MimeTypeInterface
 	case ImageXMsBmp = 'image/x-ms-bmp';
 	case TextPhp = 'text/php';
 	case TextXPhp = 'text/x-php';
-	case ImageHeif = 'image/heif';
-	case ImageHeic = 'image/heic';
 	case ImageAvif = 'image/avif';
 	case TextPlain = 'text/plain';
 	case ApplicationAndrewInset = 'application/andrew-inset';
@@ -667,7 +665,9 @@ enum MimeType: string implements MimeTypeInterface
 	case ImageCgm = 'image/cgm';
 	case ImageG3fax = 'image/g3fax';
 	case ImageGif = 'image/gif';
+	case ImageHeic = 'image/heic';
 	case ImageHeicSequence = 'image/heic-sequence';
+	case ImageHeif = 'image/heif';
 	case ImageHeifSequence = 'image/heif-sequence';
 	case ImageIef = 'image/ief';
 	case ImageJxl = 'image/jxl';
@@ -822,8 +822,6 @@ enum MimeType: string implements MimeTypeInterface
 			self::ImageXMsBmp => 'bmp',
 			self::TextPhp => 'php',
 			self::TextXPhp => 'php',
-			self::ImageHeif => 'heif',
-			self::ImageHeic => 'heic',
 			self::ImageAvif => 'avif',
 			self::TextPlain => 'env',
 			self::ApplicationAndrewInset => 'ez',
@@ -1459,7 +1457,9 @@ enum MimeType: string implements MimeTypeInterface
 			self::ImageCgm => 'cgm',
 			self::ImageG3fax => 'g3',
 			self::ImageGif => 'gif',
+			self::ImageHeic => 'heic',
 			self::ImageHeicSequence => 'heics',
+			self::ImageHeif => 'heif',
 			self::ImageHeifSequence => 'heifs',
 			self::ImageIef => 'ief',
 			self::ImageJxl => 'jxl',
@@ -1636,8 +1636,6 @@ enum MimeType: string implements MimeTypeInterface
 			'jpeg' => self::ImageJpeg,
 			'jpe' => self::ImageJpeg,
 			'bmp' => self::ImageXMsBmp,
-			'heif' => self::ImageHeif,
-			'heic' => self::ImageHeic,
 			'avif' => self::ImageAvif,
 			'env' => self::TextPlain,
 			'ez' => self::ApplicationAndrewInset,
@@ -2415,7 +2413,9 @@ enum MimeType: string implements MimeTypeInterface
 			'cgm' => self::ImageCgm,
 			'g3' => self::ImageG3fax,
 			'gif' => self::ImageGif,
+			'heic' => self::ImageHeic,
 			'heics' => self::ImageHeicSequence,
+			'heif' => self::ImageHeif,
 			'heifs' => self::ImageHeifSequence,
 			'ief' => self::ImageIef,
 			'jxl' => self::ImageJxl,

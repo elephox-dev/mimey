@@ -61,12 +61,6 @@
             "image\/x-ms-bmp",
             "image\/bmp"
         ],
-        "heif": [
-            "image\/heif"
-        ],
-        "heic": [
-            "image\/heic"
-        ],
         "avif": [
             "image\/avif"
         ],
@@ -2399,8 +2393,14 @@
         "gif": [
             "image\/gif"
         ],
+        "heic": [
+            "image\/heic"
+        ],
         "heics": [
             "image\/heic-sequence"
+        ],
+        "heif": [
+            "image\/heif"
         ],
         "heifs": [
             "image\/heif-sequence"
@@ -3069,12 +3069,6 @@
         ],
         "text\/x-php": [
             "php"
-        ],
-        "image\/heif": [
-            "heif"
-        ],
-        "image\/heic": [
-            "heic"
         ],
         "image\/avif": [
             "avif"
@@ -5136,8 +5130,14 @@
         "image\/gif": [
             "gif"
         ],
+        "image\/heic": [
+            "heic"
+        ],
         "image\/heic-sequence": [
             "heics"
+        ],
+        "image\/heif": [
+            "heif"
         ],
         "image\/heif-sequence": [
             "heifs"
